@@ -9,66 +9,30 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 30px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .description {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        .nav-links a {
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .nav-links a:hover {
-            background: #2980b9;
+            padding: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>電力系統安定性解析ツール</h1>
-        
-        <div class="description">
-            <p>このツールは、重負荷系統の系統分離時における安定化制御を解析するためのインタラクティブなWebアプリケーションです。G-Bc平面解析を用いて、運転点の可視化と安定性評価を行います。</p>
+    <div id="react-app"></div>
+    
+    <div style="margin-top: 20px; padding: 20px; text-align: center; background: #f8f9fa; border-radius: 8px;">
+        <h2 style="color: #2c3e50; margin-bottom: 15px;">関連資料</h2>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+            <a href="docs/重負荷系統の系統分離時安定化制御解析.html" target="_blank" 
+               style="padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px;">
+               理論解析
+            </a>
+            <a href="docs/theory_analysis.md" target="_blank"
+               style="padding: 10px 20px; background: #27ae60; color: white; text-decoration: none; border-radius: 5px;">
+               技術文書
+            </a>
         </div>
-
-        <div class="nav-links">
-            <a href="docs/重負荷系統の系統分離時安定化制御解析.html" target="_blank">理論解析</a>
-            <a href="docs/theory_analysis.md" target="_blank">技術文書</a>
-        </div>
-
-        <div id="react-app"></div>
     </div>
 
     <script type="text/babel" src="src/interactive_stability_analysis.jsx"></script>
